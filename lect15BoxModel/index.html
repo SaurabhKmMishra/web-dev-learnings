@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+            
+         /* Use of the universal selector which is used to follow best practice of 
+            code writing in the industry i.e, setting margin and padding initially equal to '0'
+            and this can be changed further whenever needed   */
+            *{
+                padding: 0px;
+                margin: 0px;
+            }   
+
+
+         h1{
+            background-color: aqua;
+           /* border-style: solid;
+            border-width: 2px;
+            border-color: brown;  OR */
+            
+            /* Using the short hand notation of border -> */
+            border:solid black 3px;
+            
+            /* We uses border radius to make  all the corners rounded. */
+            border-radius: 20px; 
+
+
+           /* If we wants to make an specific corned rounded  we can use -> */
+           /* border-top-left-radius: 5px;
+           border-bottom-right-radius: 8px;
+           border-top: solid pink 5px;
+           border-bottom: dotted pink 5px;
+           border-left: dashed blueviolet 3px;
+           border-right: solid lightseagreen 3px; */
+           
+           /* Controlling the width of a particular tag. */
+           width: 450px;
+
+           /* Controlling the height of a particular tag. */
+           height: 40px;
+
+           /* Use of padding viz. used to create space in all directions b/w the border and the content written.*/
+              /* Some more Padding functionalities. */
+
+            /*   padding:10px;   //or we can use below options->
+                 padding-left: 10px;
+                 padding-right: 15px;
+                 padding-top: 12px;
+                 padding-bottom:9px;  
+            */
+
+            /* Using short hand notations of padding -> padding: top, right, bottom, left  */
+            padding: 10px 15px 17px 13px;
+
+
+           /* Use of margin viz. responsible to create space/gap outside the border in all the directions. ex-> 
+            margin: 20px;     */
+           margin: 20px 40px 30px 60px;
+
+         }
+         .firstPara{
+            background-color: blanchedalmond;
+            border:solid black 3px;
+            width: 450px;
+            height: 65px;
+
+            /* Some more Padding functionalities. */
+            padding-left: 10px;
+            padding-right: 15px;
+            padding-top: 12px;
+            padding-bottom:9px;
+
+            /* Some more margin functionalities. */
+            margin-left: 10px;
+            margin-right: 15px;
+            margin-top: 13px;
+            margin-bottom:40px;
+
+
+            
+            
+         }
+         .secondPara{
+            background-color: beige;
+            border:solid black 3px;
+            width: 450px;
+            height: 80px;
+            
+            /* Using short hand notations of padding through another method->  padding: vertical padding, horizontal padding.*/
+            padding: 10px 40px;
+
+            margin: 50px 15px;
+
+         }
+         .thirdPara{
+            background-color:yellow;
+            border:solid black 3px;
+            width: 450px;
+            height: 80px;
+            padding: 5px;
+         }
+
+
+     </style>
+
+</head>
+<body>
+    
+
+    <h1> Welcome to my web Dev place </h1>
+
+    <!-- NOTE: Width and Height don't apply to Span tag as it is an inline element 
+        it will take space according to the content written in it.-->
+
+    <p class="firstPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur qui architecto quaerat fugit rem id odio, placeat dicta sequi numquam. Facere obcaecati quas eius harum.</p>
+
+    <p  class="secondPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta a dolorem expedita praesentium vel laborum sequi, tempore nobis mollitia similique saepe, ullam, sed neque! Velit, unde illo totam eum error perspiciatis molestias possimus in. Architecto.</p>
+
+    <p  class="thirdPara" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aperiam pariatur beatae saepe corporis quia. Aliquam dolorem assumenda, dolor fugit molestiae reiciendis labore exercitationem libero pariatur accusantium veniam, dicta obcaecati?</p>
+
+
+
+
+</body>
+</html>

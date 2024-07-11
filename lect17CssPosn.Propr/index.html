@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            margin:10px;
+
+            /* by default the  position property of an object is static. */
+        }
+        div{
+            border:1px solid black;
+            height: 6000px;
+            background-color:blueviolet;
+        }
+        .image2{
+
+            position: relative;
+            top: 200px;
+            left: 100px;
+
+         /* 2. the use of position:relative; propr. is that:
+            > we can position the object as per the current window.  
+            > Also here we have four propr. to do so: top,bottom,left,right to define spacing or positionings.
+            > Also the space occupied by the obj. previously is preserved. */
+    
+        /* 
+            position: absolute;
+            top: 200px;
+            left: 100px; */
+
+           /* 
+            the absolute positioning have folln. propr:-
+            > The obj. is relative to its closest positioned ancestor i.e, the position of its ancestor needs to be set to relative.
+            > No gap/space is maintained for previous position.
+            > also contains top,bottom,left,right etc.
+            > Overlaping can be done if we only set the obj posn. to be absolute; and the closest positioned ancestor to be relative
+        */
+
+        }
+        .container{
+            position: relative;
+
+            /* done for the purpose to fascillate absolute positioning */
+        }
+
+        .image4{
+            position: fixed;
+
+            /* this posn. propr. is used to fix/intact an obj. at a prticular place in 
+            the entire web page i.e, even with the sliding this obj. will get its place in the window at the same position. */
+        }
+
+        .image3{
+            position: sticky;
+            top: 100px;
+/* 
+            the work of sticky position is same as of the fixed position but the difference is that
+            the sticky only sticks to its position in the window till it's parent container is displaying if
+             the parent container passes away with sliding then this  obj. with sticky position will also disappear with this sliding.   */
+        }
+
+        .box{
+             background-color: aquamarine;
+             height: 5000px;
+        }
+
+    </style>
+
+</head>
+<body>
+       
+      <div class="container">
+        <img 
+        src="img1.jpg" 
+        alt="poster1"
+        width="200px"
+        height="300px"
+        class="image1"/>
+
+        <img 
+        src="img2.jpg" 
+        alt="poster1"
+        width="200px"
+        height="300px"
+        class="image2"/>
+
+        <img 
+        src="img3.jpg" 
+        alt="poster1"
+        width="200px"
+        height="300px"
+        class="image3"/>
+
+        <img 
+        src="img4.jpg" 
+        alt="poster1"
+        width="250px"
+        height="300px"
+        class="image4"/>
+
+      </div>
+
+      <div class="box">
+
+      </div>
+    
+
+</body>
+</html>

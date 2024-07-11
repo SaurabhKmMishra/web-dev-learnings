@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css 3D Transforms</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            background-color: #f3e0aa;
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+        }
+        .items{
+            padding: 2rem;
+            height: 250px;
+            width: 250px;
+            background-color: rgb(150, 212, 83);
+            border: 2px solid black;
+        }
+
+
+        /* Perspective is optional but sometimes no change is seen in 3D.So, to show difference a perspective is must.  */
+
+        #rotateX:hover{
+            transform: perspective(400px) rotateX(45deg);
+            /* to rotate along x in 3d. */
+        }
+        #rotateY:hover{
+            transform: perspective(400px) rotateY(-45deg);    
+        }
+        #rotateZ:hover{
+            transform: rotateZ(45deg);    
+        }
+
+
+
+        #translateX:hover{
+            transform: translateX(100px);
+        }
+        #translateY:hover{
+            transform: translateY(100px);
+        }
+        #translateZ:hover{
+            transform:perspective(200px) translateZ(-50px);
+
+            /* here we needs to understand that:-
+            1. only using translateZ() will result in no change.
+
+            2. that's why we needs to provide a perspective viz. the distance from where we are watching that object. 
+
+            3. +ve value in translateZ() will expand the obj. and reverse with -ve value as per the perspective provided.*/
+        }
+
+
+
+        #scaleX:hover{
+            transform:scaleX(1.5);
+        }
+        #scaleY:hover{
+            transform:scaleY(1.5);
+        }
+        #scaleZ:hover{
+            transform: perspective(300px) scaleZ(3) rotateY(30deg);
+
+            /* here we have added the rotation to show the increase in scale along z-axes as without rotation the increment in the scale along z-axis won't be visible. */
+        }
+
+
+        #skewX:hover{
+            transform:skewX(30deg);
+        }
+        #skewY:hover{
+            transform:skewY(30deg);
+        }
+        /* Their is no skewness in Z-direction. */
+
+        
+    </style>
+</head>
+<body>
+       <div class="container">
+
+            <div class="items" id="rotateX">Rotate X</div>
+            <div class="items" id="rotateY">Rotate Y</div>
+            <div class="items" id="rotateZ">Rotate Z</div>
+            <div class="items" id="translateX">Translate X</div>
+            <div class="items" id="translateY">Translate Y</div>
+            <div class="items" id="translateZ">Translate Z</div>
+            <div class="items" id="scaleX">Scale X</div>
+            <div class="items" id="scaleY">Scale Y</div>
+            <div class="items" id="scaleZ">Scale Z</div>
+            <div class="items" id="skewX">Skew X</div>
+            <div class="items" id="skewY">Skew Y</div>
+            
+       </div>
+</body>
+</html>

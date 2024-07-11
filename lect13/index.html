@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Among the External and the Internal Css the one which comes in last is considered. -->
+
+    <!-- Using External Css-->
+    <link rel="stylesheet" href="skm.css">
+
+    <!-- Using Internal Css-->   
+     <!-- NOTE-> Inline Css is prioritized over Internal Css but if we add '!important' in the Internal Css than it is prioritized.-->
+    <style>
+        
+
+        /* below h1 is called 'selector' viz. the target element and 'color' is the property and 'green' is the value. */
+        h1{
+            color:green;
+        }
+        p{
+            background-color: blueviolet;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+
+
+   <h1>Welcome to my place</h1>
+
+    <!-- Using Inline Css-->
+    <!-- Inline Css not a good practice to use as going more complex it creates a meshy situation.-->
+    <!-- NOTE-> Inline Css is prioritized over Internal Css but if we add '!important' in the Internal Css than it is prioritized.-->
+
+    <p style="background-color:yellow">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eaque illo magni velit vero? Asperiores atque dolores sequi minus magnam.</p>
+    
+    <p style="color:aqua">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus minus quaerat provident ad quod consectetur odit beatae eius, molestias soluta esse iste sint? Eligendi officia sit maxime recusandae sint quas.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt non numquam at error explicabo, quas et repellendus obcaecati porro iure voluptates natus minima tempore ipsum quod amet saepe modi adipisci soluta minus qui ipsam! Vitae laborum quos in, vel quibusdam eligendi dicta quo ad, delectus officia ipsam ut est repudiandae!</p>
+
+    <footer>I am Footer</footer> 
+
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding justify content and align items</title>
+    <style>
+        .container{
+            background-color: beige;
+            border: 5px solid black;
+            margin: 2px;
+            padding: 2px;
+            display: flex; 
+            flex-direction: row;
+            
+            height: 800px;
+            /* flex-wrap: wrap; */
+            align-items:start;
+            justify-content:start; 
+            align-content:start;
+        }   
+            /* > the justify content property aligns the content corresponding to the main axis viz. horizontal by default.
+
+            > also the main axis is dependent on the flex direction i.e, if the flex dirn. is row then the main axis will be horizontal else vertical if it is column. 
+            
+            > Here are the possible values for the justify-content property and what they do:
+
+                  a. flex-start: Items align to the start of the container's main axis.
+                  b. flex-end: Items align to the end of the container's main axis.
+                  c. center: Items align at the center of the container's main axis.
+                  d. space-between: Items display with equal spacing between them.
+                  e. space-around: Items display with equal spacing around them.
+                  f. space-evenly: Items display with equal spacing around them, including the outer edges.
+            
+
+
+            > The align-items property applies on corresponding to cross axis viz. vertical by default.
+
+            >by default the items are stretch in alignment until a dedicated height is not given.
+
+            > Here are the possible values for the align-items property and what they do:
+
+             0. flex-start: Items align to the start of the container's cross axis.
+             a. flex-end: Items align to the end of the container's cross axis.
+             b. center: Items align at the center of the container's cross axis.
+             c. baseline: Items display at the baseline of the container's cross axis.
+             d. stretch: Items are stretched to fill the container's cross axis (default behavior if no height is set).
+            
+     *** NOTE:- to align an element in the center we just need to set it's justify-content and align-items to center.
+            
+
+            > the align-content property is used to align the flex lines within a flex container when there is extra space in the cross axis. This property is applied to flex containers (those with display: flex;)
+
+            >Here are the possible values for the align-content property and what they do:
+
+              a. flex-start: Lines are packed at the start of the container's cross axis.
+              b. flex-end: Lines are packed at the end of the container's cross axis.
+              c. center: Lines are packed at the center of the container's cross axis.
+              d. space-between: Lines display with equal spacing between them.
+              e. space-around: Lines display with equal spacing around them.
+              f. stretch: Lines are stretched to fill the container's cross axis.
+              g. space-evenly: Lines display with equal spacing around them, including the outer edges.
+
+
+            > This property is particularly useful when there's extra space in the cross axis and you want to control how the flex lines are distributed within the container.  
+               
+            */
+
+        .box{
+            /* height: 200px;
+            width: 200px; */
+            border: 2px solid black;
+            margin: 2px;
+            padding: 2px;
+        }
+        #box1{
+            background-color: aqua;
+            order: 500;
+            /* flex-shrink: 4; */
+            /* flex-grow: 5; */
+            /* align-self: center; */
+        }
+        #box2{
+            background-color: blue;
+            /* flex-grow: 1; */
+            /* align-self: flex-end; */
+        }
+        #box3{
+            background-color: orange;
+            /* flex-grow: 1; */
+            /* align-self:flex-start; */
+        }
+        #box4{
+            background-color: brown;
+            order: -1; 
+            align-self:center;
+            /* flex-grow: 1; */
+             /* flex-shrink: 8; */
+             /* flex-basis: 400px; */
+             /* flex: 0.21 8 200px; */
+       } 
+        /* these boxes are flex-items following are some tags to apply on them:-
+          
+       1. order: by using order we can apply order to a box , also to bring in the very beginningwe needs to add -1 as order and not 1.
+       
+       2.flex-shrink: it determines how much an element will shrink compared to other flex items when there's insufficient space in the container to accommodate all their preferred sizes.
+       
+       3.flex-grow:  It defines how much an element can grow relative to its siblings when there's extra space in the container.
+       
+       4.flex-basis:  It specifies the initial main size of a flex item before any space distribution takes place according to the flex grow and shrink properties. Essentially, flex-basis determines the default size of the flex item in the direction of the main axis.In CSS, flex-basis is a property used in the context of a flex container.
+
+       5. Shorthand notation for flex property in css:  
+                                        flex: [flex-grow] [flex-shrink] [flex-basis];
+                                        ex:  flex: 1 0 10%;
+
+       6.align-self: The align-self property in CSS is used to override the align-items property for individual flex or grid items. It allows you to specify how a particular item should be aligned along the cross axis within its container, providing more granular control over the layout of items in flex or grid containers.
+                 
+                                a.  flex-start: Aligns the item to the start of the cross axis.
+                                b.  flex-end: Aligns the item to the end of the cross axis.
+                                c.  center: Centers the item along the cross axis.
+                                d.  baseline: Aligns the item such that its baseline aligns with the baselines of other items in the container.
+                                e.  stretch: Stretches the item to fill the container along the cross axis (if the item is not given a specific size).
+
+*/
+
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="box" id="box1">Box1</div>
+        <div class="box" id="box2">Box2</div>
+        <div class="box" id="box3">Box3</div>
+        <div class="box" id="box4">Box4</div>
+     </div>
+</body>
+</html>
+
+

@@ -1,0 +1,75 @@
+.box{
+
+    width: 400px;
+    height: 400px;
+    background-color:beige;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto; 
+     /* Setting margin: auto in CSS is commonly used to center an element horizontally within its containing element. */
+    
+     transition: all 3s linear 1s;
+
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.box:hover{
+
+    /* transform: rotate(360deg); */
+     /* transform: rotate(-60deg); */
+
+
+    /* transform: scale(2); */
+                  /* equally implemented on both axes */
+
+    /* transform: scale(0.5,2); */
+   
+
+    /* transform: skew(30deg); */
+    /* transform: skew(30deg,15deg); */
+    /* transform: skew(-15deg); */
+
+         /*  To tilt the box with a degree. */
+
+    
+    /* transform: translate(100px); */
+    /* transform: translate(-200px); */
+    /* transform: translate(0px,500px); */
+                       /* to move along desired axes. */
+
+    /* transform: translate(500px,500px); */ 
+                     /* the resultant will move diagonally */
+
+
+        /* 1. syntax:translate(x-axis,y-axis); 
+        2. the transform property is used to move box from one place to other.
+        3. we can also use scaleX,scaleY,skewX,skewY to transform in desired axes.
+         */
+    
+    /* The matrix() method combines all the 2D transform methods into one.
+    
+    The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateX())*/     
+
+    transform: matrix(1.5, -0.3, 0.2, 0.5, 0.2, 0.5);     
+
+}
+
+p{
+    font-size: 36px;
+}
+
+
+

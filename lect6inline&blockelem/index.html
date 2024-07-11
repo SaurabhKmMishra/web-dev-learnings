@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- if we uses '>' b/w two  tags it works as parent child like division.-->
+    <!--whereas '+' when appied b/w two tags result them in the form of siblings i.e one after another and-->
+    <!--not one tag inside another tag.-->
+    
+    <p>this is my first paragraph.</p> 
+    <section>my name is saurabh kumar mishra.</section> <!--use p+section-->
+    
+    <!--we prepare id by using #-->
+    <p id="p1"></p>  <!--by p#p1-->
+    <article id="article1"></article> <!--article#article1-->
+
+
+    <!--we can prepare class using '.'-->
+    <article class="dog"></article>
+    <section class="cat dog monkey"></section> <!--by section.cat.dog.monkey-->
+    <p class="para"></p>e
+
+
+    <!--Use of curly braces.-->
+    <p>hello</p> <!-- created by p{hello} -->
+    <a href="">click here</a> <!--created by a{click here}-->
+
+    <p>
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+    </p>
+
+     <!-- the div tag is used to wrap many tags inside it. this tag doesn't provides any semantic meaning.-->
+     <!-- i.e, div is used to create divisions -->
+    <div class="container"> <!--this line created by .container which gives-> <div class="container"></div> -->
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+    </div>
+    
+
+    <div class="wrapper"> <!-- written by .wrapper>ol>li*3 -->
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <div style="background-color: aqua">this is my first div.</div>
+    <div style="background-color: rgb(255, 204, 0)">this is a block element.</div>
+    <div style="background-color: rgba(238, 130, 238, 0.96);display:inline">but it can be conv. into inline</br></div>
+    <!-- Since, div tag takes the width of the entire screen. so, it is an ex. of block element. -->
+
+    <span style="background-color:rgb(255, 192, 247)">this is my first span.</span>
+    <span style="background-color:chartreuse"> and this is an example of inline.</span>
+    <!-- whereas the span tag takes only the required screen width, so, it is an example of inline element.  -->
+    
+
+    <p style="background-color:orange">this is a paragraph.</p>
+    <p style="background-color:orange">and it is an example of block element.</p>
+    <p style="background-color:rgba(217, 255, 0, 0.699);display: inline">But, para can also be convr. into inline.</p>
+
+    
+    <nav class="hyperlinks">
+        <ul>
+
+              <!--Method to create hyperlinks side by side-->
+              
+            <li style="display: inline-block"><a href="https://google.com">Google</a></li>
+            <!--Note-> Method to place one anchor tag followed by another using style Attribute.-->
+            <li style="display: inline-block"><a href="https://facebook.com">facebook</a></li>
+            <li style="display: inline-block"><a href="https://youtube.com">youtube</a></li>
+        </ul>
+    </nav>
+
+    <ol>
+
+        <li><a href="https://google.com">google</a></li>
+        <li><a href="mailto:saurabhkm628732@gmail.com">E-mail</a></li> <!-- Syntax to mail-->
+        <li><a href="tel:+916287320996">Phone</a></li> <!-- Sytax to telephone -->
+   
+        </ol>
+
+      <!-- Use of details, summary tags to make a frequently asked section -->
+        <details>
+            <summary>What is your age?</summary>
+            <p>I am 18</p>
+        </details>     
+
+</body>
+</html> 

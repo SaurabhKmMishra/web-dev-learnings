@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+         .container{
+            width:100vw;
+            height: 100vh;
+            background-color: beige;
+         }
+
+         .box{
+            width:350px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px;
+            border: 5px solid yellow;
+            margin: 10px;
+            position: relative;
+            /* animation-name:rightMovement; */
+            /* animation-duration: 5s; */
+            /* animation-iteration-count: 1; */
+            /* animation-delay: 2s; */
+            /* animation-timing-function:linear; */
+            /* animation-direction:alternate; */
+            /* animation-fill-mode:backwards; */
+
+            animation: 5s ease-in 1s infinite alternate none running rightMovement;  /* done by using short hand notation.*/
+         }  
+
+             /* short hand notation for animation :
+              @keyframes duration | easing-function | delay |
+         iteration-count | direction | fill-mode | play-state | name */
+            
+
+      /*   The animation shorthand property combines the following individual properties:
+
+             a. animation-name: Specifies the name of the @keyframes at-rule that defines the animation.
+
+             b.  animation-duration: Defines how long the animation should take to complete one cycle.
+
+             c.  animation-timing-function: Specifies the speed curve of the animation.
+
+                  ->  Values of animation-timing-function:-
+
+                   1.  ease: The animation starts slowly, accelerates in the middle, and slows down again at the end (default).
+                   2.  linear: The animation has a constant speed from start to finish.
+                   3.  ease-in: The animation starts slowly and speeds up towards the end.
+                   4.  ease-out: The animation starts quickly and slows down towards the end.
+                   5.  ease-in-out: The animation starts slowly, speeds up in the middle, and slows down again at the end.
+                   6.  cubic-bezier(n, n, n, n): Allows the creation of a custom timing function using cubic-bezier curve.
+
+
+             d.  animation-delay: Defines when the animation should start.
+
+             e.  animation-iteration-count: Specifies the number of times the animation should be played.
+
+             f.  animation-direction: Defines whether the animation should play in reverse on alternate cycles.
+                    
+                   ->  Here are the possible values for animation-direction:
+
+                        1. normal: The animation plays forward from the beginning to the end (default).
+                        2. reverse: The animation plays backward from the end to the beginning.
+                        3. alternate: The animation plays forward for odd iterations and backward for even iterations.
+                        4. alternate-reverse: The animation plays backward for odd iterations and forward for even iterations.
+
+
+             g.  animation-play-state: Allows the animation to be paused or running.
+
+             h.  animation-fill-mode: defines what the element's final styles should be after the animation completes, or what its styles should be if the animation has not started yet.
+
+                 ->  Here are the values you can use with animation-fill-mode:
+
+               1. none: The default value. The animation will not apply any styles to the target before or after the animation is executed. The element will return to its original state when the animation is not running.
+
+               2. forwards: The element will retain the styles defined in the final keyframe (the 100% keyframe) after the animation ends.
+
+               3. backwards: The element will apply the styles defined in the first keyframe (the 0% keyframe) immediately when the animation is applied (before the animation starts).
+
+               4. both: The element will follow the rules for both forwards and backwards. It will apply the styles of the first keyframe immediately when the animation starts and retain the styles of the final keyframe when the animation ends.    
+               
+               */
+
+         @keyframes rightMovement {
+            from{
+                top: 0;
+                left:0;
+            }
+
+            to{
+                top: 0;
+                left: 1550px;
+
+            }
+
+         }
+
+
+         #box2{
+
+            width:350px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px;
+            border: 5px solid yellow;
+            margin: 10px;
+            position: relative;
+            animation: 5s ease-in 2s infinite alternate none running leftMovement;
+
+            }
+
+
+        @keyframes leftMovement {
+
+            from{
+
+                top: 650px;
+                left: 1550px;
+
+               }
+
+            to{
+                top: 650px;
+                left: 0;
+
+              }
+            }  
+        
+
+         #circle{
+            width:120px;
+            height: 120px;
+            background-color: blue;
+            border-radius: 200px;
+            border: 5px solid yellow;
+            margin: 10px;
+            position: relative;
+            top:20%;
+            left:45%;
+            animation: 10s ease-in-out 0s infinite alternate-reverse none running circleMovement;
+           
+         }   
+         
+          @keyframes circleMovement {
+
+            0%{
+                  top:1%;
+                  left:5%;
+            }
+            30%{
+                  top:5%;
+                  left: 90%;
+            }
+            60%{
+                  top: 90%;
+                  left:10%;
+            }
+            100%{
+                top:95%;
+                left:90%;
+
+            }
+
+            }  
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+          <div class="box"></div>
+          <div id="box2"></div>
+          <div id="circle"></div>
+    </div>
+
+</body>
+</html>

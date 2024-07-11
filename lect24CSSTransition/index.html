@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions In Css</title>
+    <style>
+       /* the transition is smooth conversion from an initial state to a final state whereas the animation is a series of multiple complex movements/transitions. */ 
+
+       .box{
+           
+        height: 400px;
+        width: 400px;
+        background-color: beige;
+        border: 2px solid black;
+
+
+         /* transition property defines the property on which to apply the transition on.*/
+
+        /* transition-property:all;  
+        transition-duration: 4s;
+        transition-delay: 1s;
+        transition-timing-function: ease-in-out; */
+
+
+        /* short hand notation  */
+         
+                   /* Apply to 1 property */
+
+
+         /* property name | duration */
+        /* transition: all 4s; */
+
+
+        /* property name | duration | delay */
+         /* transition: all 4s 5s; */
+
+
+        /* property name | duration | easing function */
+        /* transition: all 4s ease-in-out;  */
+
+
+           /* property name | duration | easing function | delay */
+        /* transition: all 4s ease-in-out 1s; */
+
+
+
+                    /* Apply to 2 properties */
+         transition: width 2s,height 4s;
+
+
+
+       }
+
+       .box:hover{    
+
+        width: 1200px;
+        height: 900px;
+        background-color: blue;
+
+        /* A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, the pseudo-class :hover can be used to select a button when a user's pointer hovers over the button and this selected button can then be styled.
+                     A pseudo-class consists of a colon (:) followed by the pseudo-class name (e.g., :hover). */
+
+       }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

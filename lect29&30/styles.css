@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.body_container{
+    height: 100%;
+    width: 100%;
+    /* background-image: linear-gradient(to top, #c0907c 0%, #a0b7c1 100%); */
+  
+}
+
+.container{
+     width: 72vw;
+     padding: 2rem 1rem;
+     margin:auto; 
+             /* 0 margin from top & bottom , and auto from L&R to center */
+      /* background-image: linear-gradient(to top, #b26d9e 0%, #dfd691 100%);          */
+
+}
+
+.main_container{
+    display: grid;
+    /* grid-template-columns: repeat(4,1fr); */
+                      /* above line commented as we added media query below */
+   
+    /* grid-template-columns: repeat(1,1fr);  */
+                        /* above line commented as we replaced media query below */
+
+    grid-template-columns: repeat(auto-fit, minmax(350px,400px ));
+    justify-content: center;
+    gap: 1.5rem;
+   
+}
+
+/* 
+
+@media (min-width:650px){
+    .main_container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (min-width:1080px){
+    .main_container{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media (min-width:1340px){
+    .main_container{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
+    
+*/
+
+a{
+    text-decoration: none;
+}
+
+.header_container{
+    margin-bottom: 2rem;
+}
+
+.header_title{
+    margin-bottom:1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+
+    color: rgb(46, 43, 43);
+   
+
+}
+
+.header_desc{
+    max-width: 768px;
+    text-align: center;
+    color: rgb(96, 94, 91);
+    margin: 0 auto;
+    font-weight: 700;
+   
+}
+
+
+
+.card_container{
+    display: flex;
+    /* height: 350px; */
+    flex-direction: column;
+    border: 1px solid rgb(197, 193, 193);
+    border-radius: 5px;
+    /* overflow: hidden; */
+
+    background-image: linear-gradient(to right, #d3efee 0%, #b4dae8 31%, #e0d1ef 100%);
+
+    box-shadow: 10px 15px 20px rgb(72, 68, 68);
+
+}
+
+.card_image_container{
+    position: relative;
+    overflow: hidden;
+    height: 11rem;
+
+
+}
+
+@media (min-width:768px){
+    .card_image_container{
+        height: 16rem;
+    }
+}
+
+.card_image{
+    object-fit:cover;
+    object-position: center;
+   
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+
+
+     
+    /* object-fit: cover; in CSS makes an image or video cover its container, maintaining its aspect ratio. */
+   
+    /* object-position: center; centers the image within the container. If the image is cropped due to the object-fit: cover; property, the center of the image remains visible. This is useful for ensuring the focal point of the image stays centered even when resized or cropped. */
+}
+
+.card_title_container{
+    display: flex;  
+    flex-direction: column;
+    padding: 1.5rem;
+
+    
+
+}
+
+.card_container:hover{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+
+}
+
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(46, 41, 41);
+    line-height: 1.5;
+    margin-bottom:0.3rem;
+
+}
+
+.card_title:hover{
+    color: rgb(48, 48, 204);
+}
+
+.card_desc{
+    font-size: 1rem;
+    color: rgb(96, 94, 91);
+}
+
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.15rem;
+    padding-bottom: 1.5rem;
+}
+
+.author_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ 
+
+
+}
+
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    /* padding: 0.2rem; */
+    background-color: #ebe7e7;
+    
+}
+
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.author_info_container span:nth-child(1){
+    color: rgb(48, 48, 204);
+     
+}
+
+.author_info_container span:nth-child(2){
+    color: rgb(96, 94, 91);
+}
+
+.card_tag_container{
+    font-size: 0.8rem;
+    color: rgb(98, 91, 91);
+    border: 1px solid rgb(85, 82, 82);
+    border-radius: 4px;
+    line-height: 1.3rem;
+    padding:0.25rem 0.5rem;
+
+}
+
+

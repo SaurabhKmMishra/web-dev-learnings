@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+     .container{
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        background-color: #4c7299;
+        background-image: -webkit-linear-gradient(62deg, #4c7299 0%, #E0C3FC 100%);
+        background-image: -moz-linear-gradient(62deg, #4c7299 0%, #E0C3FC 100%);
+        background-image: -o-linear-gradient(62deg, #4c7299 0%, #E0C3FC 100%);
+        background-image: linear-gradient(62deg, #4c7299 0%, #E0C3FC 100%);
+
+
+
+     }
+
+     .card{
+        width: 400px;
+        height: 650px;
+        background-color: white;
+        margin: auto;
+        /* gap: 20px; */
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+       
+        border-radius:20px;
+
+        
+
+     }
+     
+     .upperWindow img{
+        width: 400px;  
+        height:200px;
+        border-radius:20px 20px 0px 0px;
+     }
+
+     .midWindow{
+        
+        width: 300px;
+        margin: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        gap: 25px;
+
+        margin: 18px;
+     }
+     
+     h2{
+        font-size: 2rem;
+     }
+
+     .midWindow p{
+        font-size:1.2rem;
+     }
+
+     .lowerWindow{
+        width: 350px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+     }
+
+     .plan{
+        
+        width: 100%;
+        height: 60px;
+        background-color: rgba(194, 171, 223, 0.697);    
+        border-radius:10px;
+
+        display: flex;
+        justify-content: space-around;
+
+       
+        font-weight: bold;
+
+
+        gap: 50px;
+
+        padding: 8px;
+        
+     }
+
+     .music img{
+        height: 45px;
+        border-radius:10px;
+        background-color: white;
+     }
+     
+     .leftBox{
+        display:flex;
+        gap: 20px;   
+        font-size: 1.07rem;  
+     }
+
+     .rightBox{
+        padding: 8px;
+        font-size: 1.2rem;
+     }
+
+     #paymentButton{
+        width: 100%;
+        height: 60px;
+
+        background-color: rgb(22, 29, 82);    
+        border-radius:10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: 1.07rem;
+
+        box-shadow: 0px 10px 10px rgb(143, 148, 148);
+      
+     }
+
+     .cancelBox{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+     }
+
+     .cancelBox a{
+        text-decoration: none;
+        font-size: 1.33rem;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+
+     }
+
+    
+
+</style>
+
+<body>
+    
+     <div class="container">
+
+        <div class="card">
+             
+            <div class="upperWindow">
+
+                <img src="icon.jpg" alt="icon">
+
+            </div>
+
+           
+
+            <div class="midWindow">
+                 
+                    <h2 id="heading">Order Summary</h2> 
+
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At debitis consectetur corporis voluptate. Quasi id ad necessitatibus!
+                     </p>
+
+            </div>
+
+
+            <div class="lowerWindow">
+
+                <div class="plan">
+
+                    <div class="leftBox">
+
+                        <div class="music">
+                            <img src="music.png" alt="musicLogo">
+                        </div>
+
+                        <div class="rate">
+                            <p>Amount</p>
+                            <p>$99.9/year</p>
+                        </div>
+
+                    </div>
+
+                    <div class="rightBox">
+                          <a href="#">Change</a>
+                    </div>
+
+                </div>
+
+
+                <button id="paymentButton">
+                  Proceed to Payment
+                </button>
+                
+
+
+                <div class="cancelBox">
+                <a href="#">Cancel Order</a>
+               </div>
+
+
+
+            </div>
+        </div>
+
+     </div>
+
+</body>
+</html>

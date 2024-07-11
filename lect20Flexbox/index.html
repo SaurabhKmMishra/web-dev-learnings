@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: beige;
+            border: 5px solid black;
+            margin: 2px;
+            padding: 2px;
+            display: flex; 
+            /* flex-direction:row;
+            flex-wrap:wrap; */
+            flex-flow: row wrap;
+        }  
+        /*   1.> the by default prop of flex is row, to change it we uses flex-direction propr.
+
+         > the flex-direction prop comprises of:
+          1.column  (to flex into columns)
+          2.column-reverse(to reverse column)
+          3.row (to flex in a row)
+          4.row-reverse  (to reverse in a row) 
+          
+          2.> the flex-wrap consists of three propr. :-
+               a.flex-wrap:wrap; (to wrap the boxes below whenever squized)
+
+               b.flex-wrap:nowrap; (to just change the box sizes and not wrap in next line when squized.)
+
+               c.flex-wrap:wrap-reverse; (to wrap in reverse direction in the next line when squized.)
+
+          3.The flex-flow property is a shorthand property for:
+                 a.flex-direction 
+                 b.flex-wrap
+            
+          */
+
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 2px;
+            padding: 2px;
+        }
+        #box1{
+            background-color: aqua;
+        }
+        #box2{
+            background-color: blue;
+        }
+        #box3{
+            background-color: orange;
+        }
+        #box4{
+            background-color: brown;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+     </div>
+</body>
+</html>

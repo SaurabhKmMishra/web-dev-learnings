@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            box-shadow: 10px 15px 20px blue;  
+        }
+
+         .container{
+            width:100vw;
+            height: 100vh;
+            background-color: beige;
+            
+         }
+
+         .box{
+            width:350px;
+            height: 80px;
+            background-color: rgba(219, 116, 27, 0.767);
+            border-radius: 10px;
+            border: 5px solid rgb(17, 95, 221);
+            margin: 10px;
+            position: relative;
+            animation: 7s linear 1s infinite alternate none running rightMovement;
+         }  
+
+           
+
+         @keyframes rightMovement {
+            0%{
+                top: 0;
+                left:0;
+            }
+            50%{
+                  top: 0;
+                  left: 775px;
+            }
+            100%{
+                top: 0;
+                left: 1550px;
+
+            }
+
+         }
+
+
+         #box2{
+
+            width:350px;
+            height: 80px;
+            background-color:rgba(219, 116, 27, 0.767);
+            border-radius: 10px;
+            border: 5px solid rgb(17, 95, 221);
+            margin: 10px;
+            position: relative;
+            animation: 7s linear 1s infinite alternate-reverse none running leftMovement;
+
+            }
+
+
+        @keyframes leftMovement {
+
+           0%{
+                top: 650px;
+                left: 0;
+            }
+            
+            50%{
+                 top: 650px;
+                 left: 775px;
+            }
+
+            100%{
+
+                  top: 650px;
+                  left: 1550px;
+               }
+
+            }  
+        
+
+         #circle{
+            width:120px;
+            height: 120px;
+            background-color: rgba(219, 116, 27, 0.767);
+            border-radius: 200px;
+            border: 5px solid rgb(17, 95, 221);
+            margin: 10px;
+            position: relative;
+
+            animation: 7s linear 1s infinite alternate none running circleMovement;
+           
+         }   
+         
+          @keyframes circleMovement {
+
+            0%{
+                top: -100px;
+                left:0;
+            }
+
+            50%{
+                top: 450px;
+                 left: 775px;
+            }
+
+            100%{
+
+                top: -100px;
+                left: 1550px;
+            }
+
+            } 
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+          <div class="box"></div>
+          <div id="box2"></div>
+          <div id="circle"></div>
+    </div>
+
+</body>
+</html>

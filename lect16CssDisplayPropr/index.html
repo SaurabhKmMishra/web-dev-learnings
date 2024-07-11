@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+           *{
+               margin:0;
+               padding: 0;
+               box-sizing: border-box;  /* Note-> 1. The use of the box-sizing:border-box; is that it prevents the change in the actual size of the box as defined earlier by applying the padding inside the dimension by minimizing the content rather than just adding it in the width and height of the box.
+               
+               2. We can also add it in below .box class with css properties. */
+            }
+
+           .box{
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+                padding: 50px;
+
+                /* we can explicitly convert div here into inline using this syntax:-  
+                display: inline; */
+                
+               /* Important NOTE- Use case of setting box-sizing: border-box; ->  
+                let if the .box class sets the width and height to 200px and 100px respectively. With box-sizing: border-box;, the padding and border are included in these dimensions, ensuring that the final rendered size of the box is exactly as specified. Without box-sizing: border-box;, the padding and border would be added to the width and height, potentially causing layout issues. */
+           }
+
+       /*  div{
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            padding: 50px;
+        } */
+
+        span{
+            border: 2px dashed pink;
+            width: 400px;
+            height: 300px;
+            margin: 20px;
+            padding: 50px;
+            display: block;  /* explicit type conversion of span tag viz. a type of inline element into a block element type. */
+        }
+
+    </style>
+
+</head>
+<body>
+          <!-- Div is an example of block element which:-  
+             1. takes the whole line in width by default and renders in a new line always.
+             2. It respects customizing in width and height or several properties like: margin, padding in all directions. -->
+
+   <!--  <div>Hello there</div>
+
+    <div>Welcome to my place</div> -->
+
+    <div class="box"> Welcome to the magical web dev place of mine ! enjoy</div>
+
+    <span>This is your friend.</span>
+
+    <span> I welcomes you with love.</span>
+
+   <!--  span is an example of inline element and following are some of the properties of the inline tag:-
+           1. It takes only the required width to display content.
+           2. We can't apply custom width & height on inline elements.
+           3. Also we can only apply margin in horizontal direction but not in vertical one, but padding works properly.
+
+        >Important NOTE:- We can explicitly convert an inline element into a block element in css using-> display:biock;
+        -->
+
+
+                     <!-- NOTE-> VERY IMPORTANT -->
+
+
+     <!-- display:inline-block; is the 3rd display property a/c to which we can add custom width,height,margin and padding to the content as like block element and on the other hand , it will display as the inline element also with above propertie taking only required space.
+ -->
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+      <form >
+            
+
+            <label for="textfield">Textfield:</label>
+            <input type="text" name="textfield" id="textfield" placeholder="enter your short text here:">
+            <br/>
+            <br/>
+
+
+            <label for="button1">Button:</label>
+            <input type="submit" name="button1" id="button1" value="SUBSCRIBE">
+            <br/>
+            <br/>
+            
+
+             <!--The 'for' attribute of the label tag should be same to the 'id' of the input tag.-->
+          <!-- this will result that if we click the labeled text then by default the radio button will be selected-->
+
+          
+            <label for="radio1">Radio B1:</label> 
+            <input type="radio" name="radio choice1" id="radio1" >
+            <br/>
+            <br/>
+
+            <label for="radio2">Radio B2:</label> 
+            <input type="radio" name="radio choice2" id="radio2">
+            <br/>
+            <br/>  
+
+            <label for="radio3">Radio B3:</label> 
+            <input type="radio" name="radio choice3" id="radio3">
+            <br/>
+            <br/>
+
+        
+      
+
+
+
+      <!-- NOTE-> If we wants that only one radio button should be selected at a time then we needs to give same name to their i/p tag-->
+
+      <fieldset>
+
+           <legend>Please mention your contact preference -></legend>
+
+           
+           <input type="radio" name="contact" id="radio1" value="email">
+           <label for="radio1">E-mail</label> 
+           <br/>
+           <br/>
+
+           
+           <input type="radio" name="contact" id="radio2" value="phone number">
+           <label for="radio2">Phone<label> 
+           <br/>
+           <br/>  
+
+           
+           <input type="radio" name="contact" id="radio3" value="mail"/>
+           <label for="radio3">Mail</label> 
+           <br/>
+           <br/>
+
+ 
+            
+                                   <!-- two types of button usage -->
+            
+      <!--  Note: While <input> elements of type button are still perfectly valid HTML,
+                             the newer <button> element is now the favored way to create buttons. 
+                                 Given that a <button>'s label text is inserted between the opening and closing tags,
+                                     you can include HTML in the label, even images.--> 
+
+           <button>process</button>
+           <br/>
+           <br/>
+
+
+           <input type="button" value="Submit">
+           <br/>
+           <br/>
+
+
+                        <!--Method to let a image work as abutton-->
+
+        <input type="image" name="imagebutton1" id="imageButton1" alt="click here" src="109609.png"
+        height="20px" width="20px">                      
+
+
+           
+  
+      </fieldset>   
+
+
+         <!--Note: Checkboxes are similar to radio buttons, but with an important distinction: radio buttons are designed 
+                        for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. 
+                                     Where multiple controls exist, radio buttons allow one to be selected out of them all, 
+                                                 whereas checkboxes allow multiple values to be selected. -->
+        
+
+                                <!-- Use of checkboxes-->
+
+        <br/>
+        <label for="checkbox1">English</label>
+        <input type="checkbox" name="checkbox1" id="checkbox1">
+        <br/>
+        <br/>
+
+
+        <label for="checkbox2">Hindi</label>
+        <input type="checkbox" name="checkbox2" id="checkbox2">
+        <br/>   
+
+
+                              <!-- use of file-select(used to uploard files to our form)-->
+        
+        <label for="fileselect1">Upload:</label>                      
+        <input type="file" name="fileselect1" id="fileselect1"> 
+        <br/>
+        <br/>  
+
+
+                             <!-- creation of the password field -->
+
+        <label for="password1">Enter Password:</label>
+        <input type="password" name="password1" id="password1">   
+        <br/>
+        <br/>                 
+        
+        
+                            <!-- creation of date-time picker-->
+        
+        <label for="datepicker1">Select date:</label>                    
+        <input type="date" name="datepicker" id="datepicker1">
+        
+        
+
+                 
+      
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use of px,vw,vh,em,rem,% in css</title>
+    <style>
+        /* .box{
+            border: 2px solid blue;
+            width: 25%;
+        }  */
+        /* here the width will be 25% of the parenting tag. */
+
+
+        /* .parent{
+            border: 1px solid black;
+            background-color: aquamarine;
+            width:50%;
+       } 
+        .child{
+            border: 1px solid green;
+            background-color: yellow;
+            width: 30%;
+        } */
+
+        /*  here .parent is the parent tag taking hole width of the window because of div so it will acquire 50% width of the screen window. */
+   
+        /* the .child is the child inside div which will also take the whole window length but since its parent 
+        block is acquiring the 50% width of window. the .child will acquire the 30% width of the width acquired by its parent window */
+
+
+        /* .container{
+            border: 1px solid greenyellow;
+            background-color: pink;
+            height: 100vh;
+            width: 50vw;
+         }  */
+         
+          /* the width:50vw; stands for setting the width of the container 
+           to 50 on scale of 1 to 100 the width of the viewport and similar with the viewport height(vh). */
+
+
+         /* .box1{
+            border: 2px solid green;
+            font-size: 100px;
+         } */
+
+         /* Difference b/w PPI and DPI:-  Pixels per inch (PPI) refers to the number of pixels contained within each inch of a digital image or display..
+        DPI stands for Dots per Inch, referring to the number of ink droplets a printer will produce per inch while printing an image. 
+        The more dots of ink per inch the picture has, the more detail you will see when printed.
+        A good picture should have higher ppi before printing and higher dpi after printing. */
+
+
+        /*  1. Logical pixel :- Aslo know as device independent pixel. These provide consistent layout and sizing for different device .
+         By defining UI elements, font sizes, and image dimensions in logical pixels, developers can achieve a consistent appearance 
+         across various screen sizes and resolutions. The logical pixel values are then translated into the appropriate number of physical 
+         pixels based on the device's pixel density.
+
+        2.  Physical pixel :- They are the individual dots or points of light that make up the screen's resolution.
+           These dots together help us in seeing the vedio , images etc. */
+        
+
+
+
+        /* .container{
+            font-size:10px;
+            padding: 2px;
+        }   
+        .box{
+            font-size: 10em;
+            padding: 20em;
+        } */
+
+        /* by default the font size of body is 16px */
+
+        /* the em size unit is the n times multiplication of the parent container i.e, if the parent is 10px and we
+        applied the child as 10em then the child content change as 10px*10 i.e, 100px.  */
+        
+        /* padding & margin is inherited from  font-size of element itself instead of parent.
+        i.e, the padding and margin will be n times of the padding/margin of the final font-size of the element and not of the parent block in em typ size unit. */
+    
+    
+        .firstPara{
+                 
+            border: 1px solid black;
+            font-size: 5rem;
+        }
+          /* the rem size unit is relative to the fontsize of the root element i.e, the body tag having 16px by default font size. */
+    
+    </style>
+</head>
+<body>
+      <!-- <div class="box">
+        welcome to my place.
+        </div>
+       
+        <div class="parent">
+            <div class="child">
+                Radhe Radhe
+            </div>
+        </div> -->
+
+        <!-- <div class="container">
+            Hello ji kya hal hai ?
+        </div> -->
+       
+        <!-- 
+        <div class="box1">
+            Saurabh Mishra
+        </div> -->
+
+
+        <p class="firstPara">Hello ji</p>
+
+        <!-- <div class="container">
+            <div class="box">
+                Welcome to Codehelp
+            </div>
+        </div> -->
+</body>
+</html>

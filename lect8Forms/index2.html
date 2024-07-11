@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <form >
+         
+         <fieldset> <!--it surrounds the whole form by an rectangular boundary-->
+            
+            <legend>HTML Form Dummy</legend> <!-- it labels/gives title to the form boundary made by the fieldset -->
+
+
+            <!-- remember the 'for' of label and the id of the input must be same -->
+            <label for="datepicker"> Choose Date: </label>
+            <input type="date" id="datepicker">
+            
+            
+            
+            <br/>
+            <br/>
+            <!-- You can include a selected attribute on an <option> element with an empty value
+             i.e, value="" to make it selected by default when the page first loads. -->
+            <label for="selector1">Choose your favourite dish:</label>
+        <select name="dishes" id="selector1" >      <!-- multiple attribute can also be used if we wants to select multiple optns. just by -->
+             <option value="">--Your loving snack--</option>                      <!-- pressing ctrl + optns. to be selected-->
+            <option value="maggie">Maggie</option>                                      
+           <option value="kurkure">Kurkure</option>
+           <option value="chips">Chips</option>
+        </select>
+
+        <br/>
+        <br/>
+
+        <button>mai hu button</button>
+        
+        <br/>
+        <br/>
+         
+       <label for="textArea1">Please enter your review here:</label>
+        <textarea name="textArea1" id="textArea1" cols="15" rows="2" placeholder="enter text here:"></textarea>
+                                        <!--the placeholder gives a hint of what should be written here i.e, FADED TEXT-->
+
+        </fieldset
+
+
+
+     </form>
+
+</body>
+</html>

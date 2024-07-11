@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+                          /* an example of element selector*/
+        p{
+            color:brown;
+        }
+
+
+                     /* an example of id selector but remember to add a '#' before the id name. */
+
+        #article1{
+            background-color:green;
+        }
+        
+
+                             /* an example of class selector but rembr. to add a '.' before the class name. */
+        .paraclass{
+           
+              /* background-color:aquamarine;
+               background-color:rgb(231, 153, 153); */   
+
+            /* we try to avoid these type of practices but if done then the last one at the end will be considered*/
+            background-color:rgb(229, 234, 166);
+        }
+
+
+        /* Use of Group Selector  but remember to add ',' between the group elements */
+        p,article{
+            width:500px;
+        }
+
+       /* If we wants to style any class of a particular element. for ex: a class of 'p' tag even if this class lies for more 
+        than one diffn tags. */
+        p.pogo{
+               text-align:center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+     <h1>welcome to my place 2.0</h1>
+
+     <p class="paraclass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit commodi qui illum quos quam ut similique beatae nobis enim doloremque!</p>
+    
+     <p class="paraclass">My name is saurabh.</p>
+
+     <p class="pogo"> hii i am a youth now.</p>
+
+     <h4 calss="pogo">  Ram ram bhai Saarane</h4>
+
+     <article id="article1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis voluptates dicta, repellat veritatis ea porro est voluptatum commodi sit natus molestiae repudiandae cumque similique sed nam rerum eaque in officia hic necessitatibus. Explicabo voluptatem natus repellendus, inventore rem doloribus cumque ea consequatur, reiciendis accusamus quos et assumenda nisi ex architecto.</article>
+</body>
+</html>
