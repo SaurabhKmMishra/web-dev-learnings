@@ -28,18 +28,41 @@
         
           }
 
-           .card{
+          .card{
              width: 1000px;
              height: 500px;
              background-color: white;
 
              display: flex;
-
-             /* position: relative; */
              overflow: hidden;
-             
-            }
 
+            position: relative;
+             
+          }
+
+          .card .overlay{
+
+          position: absolute;
+          height: 100%;
+          width: 100%;
+
+          top: 0;
+          left: -100%;
+          
+            
+          background-color: rgba(0, 0, 0, 0.5);
+           
+
+          transition: all 5s ease ;
+           
+          }      
+
+            .card:hover .overlay{
+           
+              left: 0%;
+
+            
+            }
 
            .leftBox{
               background-color: rgb(101, 14, 83); 
@@ -148,7 +171,8 @@
                 <img src="icon.jpg" alt="icon">
 
             </div>
-                 
+             
+            <div class="overlay"></div>
 
         </div>
 
