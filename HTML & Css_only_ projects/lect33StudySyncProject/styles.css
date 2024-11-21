@@ -11,6 +11,7 @@
     --light-gray: #f0f0f0;
     --gray: #808080;
     --dark-gray: #555;
+    
 
 }
 
@@ -28,6 +29,7 @@ body{
     height: 100%;
     background-color:var(--background-color);
     padding: 1rem;
+    overflow-x: hidden;
 }
 
 
@@ -748,6 +750,7 @@ body{
     display: flex;
     flex-direction: column;
     max-width: 1280px;
+    width: 100%;
     
 }
 
@@ -878,9 +881,35 @@ ul{
 @media screen and (max-width:852px) {
        .footer-grid{
           grid-template-columns: repeat(2,1fr);
+          
        }
        .footer-top{
         padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width:420px){
+    .footer-container{
+        padding: 0;
+        margin-left: 1rem;
+    }
+    .footer-top{
+        margin-left: -2rem;   
+    }
+    .footer-grid{
+        width: 100%;
+
+        grid-template-columns: repeat(2,90px);
+        align-self: center;
+        justify-content: space-evenly;
+        
+    }
+    .footer-top{
+      padding-left: 1rem;
+    }
+    .content-right{
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
 }
 
