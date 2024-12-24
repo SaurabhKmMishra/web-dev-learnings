@@ -14,7 +14,7 @@ const andResult5 = "Hello" && console.log("hello1");
 console.log(andResult5); 
  // o/p : undefined, The left-hand side of the && is the string "Hello". Strings are truthy, so the && operator proceeds to evaluate the right-hand operand.  
 
-  // console.log("hello") prints "hello" to the console but returns undefined. Since "Hello" is truthy, the value of the expression is the result of the right-hand operand (console.log("hello")), which is undefined.
+  // console.log("hello1") prints "hello1" to the console but returns undefined. Since "Hello" is truthy, the value of the expression is the result of the right-hand operand (console.log("hello")), which is undefined.
 
 
 const orResult5 = undefined || console.log("hello2");
@@ -27,7 +27,7 @@ console.log(orResult5);
 
  console.log(!null);  // logical not inverts a truthy value to a falsy value and vice-versa.
 
- console.log(!!NaN);
+ console.log(!!NaN); //false
 
 
 

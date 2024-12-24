@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+
+    overflow-x: hidden;
+    
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#homeSection{
+    width: 100%;
+    max-width: 100vw;
+}
+
+.navBar{
+    max-width: 100vw;
+    background: #0B0202;
+    color: #E7D9D9;
+    font-weight: 600;
+    font-size: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar-container{
+    width: 100%;
+    max-width: 1000px;
+    height: 61px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftnav{
+    /* width: 50%; */
+    display: flex;
+    gap: 1rem;
+
+}
+
+.iconImage img{
+    width: 45px;
+    height: 45px;
+    border-radius: 9px;
+    align-self: flex-end;
+}
+
+.iconName{
+    align-self: center;
+}
+
+.rightnav{
+    /* width: 50%; */
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+    
+}
+
+.gameintropage{
+    height: 620px;
+    background: #B6FFF9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-page-container{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-img{
+    position: relative;
+
+}
+
+.home-img img{
+    height: 420px;
+    width: 850px;
+    border-radius: 26px;
+}
+
+.overlay{
+    position: absolute;
+    height: 420px;
+    width: 850px;
+    border-radius: 26px;
+    top: 129px;
+
+    background: #070000a8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+
+}
+
+.overlay-heading{
+    color: #BBE8E1;
+    font-size: 2.7rem;
+    margin-top: 4rem;
+}
+
+#home-pg-gm-downld{
+    width: 307px;
+    height: 51px;
+    background: #10375C;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 400;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game-desc{
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+}
+
+.developer-heading{
+    height: 100px;
+    background: #346E70;
+    color:#E2FFFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+
+.mehta-container{
+    background: #122A2B;
+    height: 455px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mishra-container{
+    height: 455px;
+    background: #6AA49F;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.developer-main-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    gap: 4.5rem;
+
+    
+}
+
+.developer-pic{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.developer-info{
+
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.developer-pic img{
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 800px;
+
+}
+
+.mehta-name{
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-mehta{
+    color: #D5FFF7;
+    font-size: 22px;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+    
+} 
+
+.mishra-name{
+    color: #02261C;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.about-mishra{
+    color: #02261C;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.about-mishra p{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.developer-social-links{
+    display: flex;
+    gap: 1rem;
+}
+
+.projectreport{
+    width: 100vw;
+    height: 455px;
+    background: #122A2B;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    gap:1rem;
+    color: #FFFFFF;
+}
+
+
+.report-container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+
+}
+
+.leftside-report{
+    display: flex;
+    justify-content: end;
+}
+
+.report-img{
+    width: 450px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 26px;
+} 
+
+.rightside-report{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+
+    gap: 1.1rem;
+}
+
+.reportheading {
+    font-size: 21px;
+    color: #6AA39F;
+
+}
+
+.reportdescription{
+    font-size: 20px;
+    font-weight: 380;
+    color: #6AA39F;
+    line-height: 21px;
+
+}
+
+.synopsis-link {
+    font-size: 20px;
+    color:#C8F3EC;
+
+} 
+
+.bottom-bar{
+    background: #6AA49F;
+    height: 61px;
+
+}
