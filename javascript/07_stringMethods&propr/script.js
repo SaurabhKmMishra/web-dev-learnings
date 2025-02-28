@@ -76,7 +76,7 @@ console.log(faltuMessage.trimStart());
     const pogo = "I am here."
     console.log(message.concat(" ", sky_var, " " , pogo ," thank You" )); 
     
-    // the concat(...strings) adds up all of the strings passed in the argument to the existing string.
+    // the concat(strings) adds up all of the strings passed in the argument to the existing string.
     // we can add multiple strings through this method.
 
 

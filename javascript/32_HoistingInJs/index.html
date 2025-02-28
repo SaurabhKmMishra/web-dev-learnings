@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+    <script src="script.js"></script>
+    <style>
+        body{
+            font-family:cursive;
+             margin: 2rem;
+             background-color: #df7c4a;
+             color:azure;
+        }
+    </style>
+</head>
+<body>
+    <h2> :> Once the js code is executed it goes through two phase i.e, Memory Creation Phase and Code execution Phase respectively.
+    </h2><br><br>
+
+    <h1>What is Hoisting?</h1>
+
+    <h2>:> Hoisting is the process in which the variables created with var and the function declarations both are appears to move in the very beginning of the program. <br><br>
+
+        :> But this doesn't happens actually, just because during the memory creation phase the variables and function are stored in the memory before program execution and this feels to be their presence above the program. <br><br>
+
+        :> Also those with var are initialized with 'undefined' are even accessible before their line of declaration as 'undefined' as their stored value. <br><br>
+
+        :> But, those with let and const are also hoisted but not accessible like as var with 'undefined' as they enter a 'Temporal Dead Zone'(TDZ) as a feature of the ES6 they can't be accessed until line of declaration is reached, hence it throws 'Reference Error'. <br><br>
+
+        :> Whereas, In the function declaration the whole fn. code gets stored in the memory itself during the memory creation phase itself, making it to be hoisted.
+
+    </h2>
+
+
+ </br> 
+</body>
+</html>

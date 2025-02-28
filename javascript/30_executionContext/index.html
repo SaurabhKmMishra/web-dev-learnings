@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding-execution context</title>
+    <script src="script.js"></script>
+    <style>
+        body{
+            font-family:cursive;
+             margin: 2rem;
+             background-color: #df7c4a;
+             color:azure;
+        }
+    </style>
+</head>
+<body>
+
+     <h1> Once the js code is executed it goes through two phase i.e, Memory Creation Phase and Code execution Phase respectively.
+        </h1>
+     </br> 
+        
+     <h2>:> We only gets the variables created with let and const in the script area in scope section of the memory tab in repl and those created with var  are found in the global one. </br></br>
+
+     :> Also in case of functions during the memory execution phase itself the function gets to be defined completely in the memory and not initialized with undefined. </br></br>
+
+    :> That is why the function in js can be used before and after its declaration.</br></br>
+
+    :> The function when called goes through creating a new Local exection context of itself in which new memory creating and code execution phase with the initialization of its variables with undefined like the global ones takes place.</br></br>
+
+    :> And after its completion the control returns to the global context code after the function call line.  </h2>  
+
+    <h2>NoTE :> The Global execution context is shown as anonymous in the call stack.</h2></br>
+    
+    <h1> What is an execution context in JavaScript, and what are the different types of execution contexts?  </h1>
+
+   <h2>    :> An execution context in JavaScript is an environment in which JavaScript code is evaluated and executed. It consists of variables, functions, and the this keyword that are accessible at a particular moment in the program. </br></br>
+         :> When JavaScript code runs, the JavaScript Engine creates an execution context to keep track of the currently executing code.</br></br>
+         
+        => it has following two types:- </br></br>
+         
+         1:> GLOBAL EXECUTION CONTEXT(GEC) :> Created when the script first runs. > Represents the global scope (window in browsers, global in Node.js). 
+         > Only one global execution context exists. > Variables and functions declared outside any function belong to this context.</br></br>
+         
+         2:> Function Execution Context (FEC) Created when a function is called. Each function has its own execution context. </br></br>
+         
+         Contains: Function scope variables (arguments object, local variables).
+        </h2>
+
+</body>
+</html>

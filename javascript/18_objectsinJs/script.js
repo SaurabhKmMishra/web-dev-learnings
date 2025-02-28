@@ -49,6 +49,20 @@ const thing2 = {
     Saurabh : 'Developer'
 };
 
+                      // Use of 'in' keyword in js
+        // 'in' is used check if a property exists within an object
+
+    console.log("to verify whether 'saurabh' property is present in object thing2' ");    
+    console.log("Saurabh" in thing2);  // true
+
+    console.log("to verify whether 'tostring' property is present in object thing2' ");  
+
+    console.log("toString" in thing2); // true (inherited from Object.prototype)
+
+
+
+
+
                       // accessing of values of objects
 
 
