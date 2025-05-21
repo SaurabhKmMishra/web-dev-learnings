@@ -1,0 +1,13 @@
+#css-image {
+    border: 4px solid green;
+}
+
+[alt="javascript roadmap"] {
+    border: 4px solid hotpink;
+}
+
+p b {
+    display: none;
+}
+
+/* here, we did display none to the bold text of the p tag , this will hide the target in case of innerText and will avoid this styling in case of innerContent.  */
