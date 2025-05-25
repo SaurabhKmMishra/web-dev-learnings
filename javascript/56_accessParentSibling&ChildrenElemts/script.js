@@ -25,8 +25,10 @@ console.log('firstLink.parentElement.parentElement.parentElement.parentNode give
 
 
 console.log(firstLink.parentElement.parentElement.children);
+// the .children property gives an HTML collection viz. only html elements.
 
 console.log(firstLink.parentElement.parentElement.childNodes);
+// whereas, the childNodes give a nodelist having all nodes be it text,element or comments.
 
 
 /* 🧩 Imagine the DOM is a tree:
