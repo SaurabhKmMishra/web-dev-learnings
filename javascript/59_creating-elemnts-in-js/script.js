@@ -112,7 +112,7 @@ for (let i = 1; i <=500; i++) {
 
 
 // or another method viz. used commonly at many places.
-// here we insert in the innnerHtml of the 
+// here we insert in the innnerHtml of the container
 
 /*
 

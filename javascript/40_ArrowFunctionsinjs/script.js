@@ -13,9 +13,9 @@ function square(num){
  // 2. Function expression
 
  /*
-const square = function(num){
+const square = function(num) {
       return num*num;
- } */
+} */
 
        // arrow function expression
 
@@ -38,11 +38,12 @@ console.log("The diff. of 8 and 3 is " + diffn(8,3));
 
 const add = (a,b) => {
     return a+b;
-}       
+} 
+
 console.log("The sum of 4 and 3 is " + add(4,3));
 
 
-        // arrow fun. use with setTimeout()
+       // arrow fun. use with setTimeout()
 
 setTimeout(() => {
     console.log("Hii (got printed after 2 sec)");

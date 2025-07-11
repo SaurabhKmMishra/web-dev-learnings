@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event and Event Object in JavaScript </title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Form Events and Event Object</h1>
+
+    <form action="/search" method="get">
+
+    <input type="text" id="username" name="username">
+    <input type="text" id="email" name="email">
+
+    <button>click Me</button>
+
+    </form>
+
+    <p>hi</p>
+    
+    <!-- The submit button by default when clicked in a form creates a dynamic URL using action, name and i/p done by the user. -->
+
+    <!-- Whereas in terms of js it fires a submit event -->
+    
+    <!-- 🔶Important Attributes of form tag -->
+
+    <!-- 🔹action: Where to send form data (usually a URL or server file).	for ex: action="submit.php" -->
+
+    <!-- 🔹method: How to send the data. GET (visible in URL) or POST (hidden in URL).	 for ex: method="post" or "get" -->
+
+
+    <!--🔹 What happens when we click Submit?
+        ✔ Data from inputs is packaged.
+        ✔ Sent to the server page defined in action.
+        ✔ Method (GET or POST) decides how data travels.
+        
+    > we can add click, focus, blur, change, etc events on several tags inside the form.
+
+    > But ✔ Only the <form> tag can handle the 'submit' event and also the rest all of the events possible.   
+    
+    > ✅ "The button inside the form with no type (or type='submit') causes the form to fire its submit event when clicked — but the button itself does not directly fire a submit event. It’s the form that does."    
+
+    > Also, the by default value of button type is 'submit'.
+    
+    > 🎯 By setting type="button", this button will NOT submit the form at all — even if it is inside the form. 
+    
+    > 🎯 Also if we wants to stop form submission using JS logic? Use event.preventDefault() in submit event listener or click event listener.
+
+    > 🎯 The type="reset" in a <button> is used to clear all form fields — setting them back to their default values (the values they had when the page loaded or the form was last reset).
+
+-->
+
+    
+
+</body>
+</html>

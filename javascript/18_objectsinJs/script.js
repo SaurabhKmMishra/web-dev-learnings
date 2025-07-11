@@ -16,8 +16,13 @@ const user = {
     city:'Meerut'
 };
 
-
 // here in the above object their are several pairs of keys with respective values are seen.
+
+                        // Use of object.entries()?
+    // ✔ It returns an array of a given object’s own enumerable key-value pairs.
+
+console.log('the following are the entries of the user obj. :');    
+console.log(Object.entries(user));                    
 
 
 const user2 = {
