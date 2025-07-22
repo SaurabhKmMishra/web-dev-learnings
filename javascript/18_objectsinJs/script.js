@@ -1,3 +1,6 @@
+// Note:> the obj. in js can be converted to array using Object.values(obj_name);
+
+
 // const user = {}    // empty object
 
 
