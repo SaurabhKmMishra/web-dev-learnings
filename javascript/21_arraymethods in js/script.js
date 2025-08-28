@@ -159,7 +159,7 @@ console.log(newArray);
 
     // 3. Adding Elements
 
-newArray.splice(0,0,"priya-lal");   // only adding at index 1 and no removing. 
+newArray.splice(0,0,"priya-lal");   // only adding at index 0 and no removing. 
 
 console.log('newArray after adding element :> ');
 console.log(newArray);

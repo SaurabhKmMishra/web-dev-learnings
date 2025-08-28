@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+
+</head>
+<body style="background-color: #212121; color:aliceblue">
+
+<table>
+    <thead>
+        <th>Value</th>
+        <th>State</th>
+        <th>Description</th>
+    </thead>
+    <tr>
+        <td>0</td>
+        <td>UNSENT</td>
+        <td>Client has been created. open() not called yet.</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>OPENED</td>
+        <td>open() has been called.</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>HEADERS_RECEIVED</td>
+        <td>send() has been called, and headers and status are available.</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>LOADING</td>
+        <td>Downloading; responseText holds partial data.</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>DONE</td>
+        <td>The operation is complete</td>
+    </tr>
+</table>
+
+</body>
+
+<script>
+    const requestUrl = 'https://api.github.com/users/saurabhkmMishra';
+    const xhr = new XMLHttpRequest(); // constructor
+
+    xhr.open('GET', requestUrl);
+    
+
+    xhr.onreadystatechange = function(){
+
+        console.log(xhr.readyState);
+
+        if(xhr.readyState === 4){
+
+            const data = JSON.parse(this.responseText);
+
+            // console.log(data.name); // to access the name property
+
+
+        // for card generation of user with a img, name and other info on clicking to a button using js only 
+
+        const button = document.createElement('button');
+        button.innerText = 'Click for Magic';
+        button.style.backgroundColor = 'rgba(131, 205, 190, 0.904)';
+        button.style.margin = '30px 90px';
+
+        document.body.append(button);
+        
+        let oneTime = 0;
+        button.addEventListener('click', generatecard);
+
+
+        function generatecard(){
+
+            if(oneTime){ // to ensure only oneTime click is 
+                return;
+            }
+
+            const myCard =  document.createElement('div');
+            myCard.style.width = '300px';
+            myCard.style.marginInline = '30px';
+        
+
+            const myImg = document.createElement('img');
+            myImg.style.height = '250px';
+            myImg.style.borderRadius = '100%';
+            myImg.src = data.avatar_url;
+
+            const myName = document.createElement('h4');
+            myName.textContent = data.name;
+
+            const myBio = document.createElement('p');
+            myBio.textContent = data.bio;
+
+            myCard.append( myImg, myName, myBio );
+
+            document.body.append(myCard);
+
+            oneTime = 1;
+
+        }
+        
+        }
+
+    };
+
+    xhr.send();
+
+
+</script>
+
+
+
+</html>

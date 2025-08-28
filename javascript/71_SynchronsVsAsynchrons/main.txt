@@ -1,0 +1,199 @@
+---
+
+## 🧠 First, What is Synchronous Code in JavaScript?
+
+JavaScript **is single-threaded and synchronous by default**, which means:
+
+* It runs **one line at a time**, **in order**, from top to bottom.
+* It **waits** for each line to finish before moving to the next.
+
+Example:
+
+```js
+console.log("Start");
+console.log("Middle");
+console.log("End");
+```
+
+➡️ Output:
+
+```
+Start
+Middle
+End
+```
+
+---
+
+## 🔁 Then, What is Asynchronous Code?
+
+Asynchronous code allows certain tasks to **run in the background** (like waiting for a response, delay, or file), and **continue executing the rest of the code without waiting**.
+
+Example:
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Inside setTimeout");
+}, 2000);
+
+console.log("End");
+```
+
+➡️ Output:
+
+```
+Start
+End
+Inside setTimeout
+```
+
+Even though `setTimeout` is written second, its callback runs later.
+
+---
+
+## 🧩 Why This Happens: The Event Loop, Call Stack & Web APIs
+
+### Let's understand the behind-the-scenes mechanism:
+
+### 1. **Call Stack**:
+
+* A place where all the function calls go.
+* Follows **LIFO** (Last In, First Out).
+* It processes **synchronous** code.
+
+Example:
+
+```js
+function greet() {
+  console.log("Hello");
+}
+greet();
+```
+
+* `greet()` is pushed to the call stack.
+* Executes `console.log`.
+* Then it's popped out.
+
+---
+
+### 2. **Web APIs (Provided by the Browser)**:
+
+* `setTimeout`, `fetch`, DOM events, etc. are not handled by JavaScript **itself**, but by the **browser** (like Chrome).
+* They run **outside** the main thread.
+
+So when you call:
+
+```js
+setTimeout(() => {
+  console.log("Timer done");
+}, 2000);
+```
+
+Here's what happens:
+
+1. `setTimeout` is sent to the browser's Web API.
+2. After 2 seconds, the callback `() => { console.log("Timer done"); }` is moved to the **callback queue**.
+
+---
+
+### 3. **Callback Queue / Task Queue**:
+
+* This is where asynchronous callbacks wait their turn.
+
+---
+
+### 4. **Event Loop**:
+
+This is the magic!
+
+The **event loop constantly checks**:
+
+👉 Is the call stack empty?
+✅ If yes → It takes the first thing from the callback queue and pushes it to the call stack to run.
+
+So:
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Inside Timeout");
+}, 2000);
+
+console.log("End");
+```
+
+🧠 Internally:
+
+* `Start` → goes to call stack → runs.
+* `setTimeout` → sent to Web API → waits 2 seconds.
+* `End` → goes to call stack → runs.
+* After 2 seconds → callback moves to callback queue.
+* Event Loop sees the call stack is empty → pushes it to stack → `Inside Timeout` runs.
+
+---
+
+## 💥 So How Does JS "Simultaneously" Balance Async?
+
+It **doesn’t** really run in parallel.
+It just **delegates async tasks** to the browser (or Node.js APIs) and **keeps going**.
+
+* The main thread runs sync code.
+* Async code runs elsewhere (in browser APIs).
+* Event loop and queues make sure everything gets handled **without blocking**.
+
+---
+
+## 🎯 Real World Analogy (Café Style):
+
+* You (JS thread) take orders (synchronous code).
+* A customer orders a coffee that takes time (setTimeout/fetch).
+* You pass it to the barista (Web API).
+* You continue serving other customers (rest of your code).
+* When the coffee is ready, the barista lets you know (callback queue).
+* You serve it (event loop pushes it to stack).
+
+---
+
+## 🧪🧠 Bonus Tip: Promises & Async/Await
+
+Promises and `async/await` are also **asynchronous**, but they use a different queue called the **microtask queue** — it gets priority over the regular callback queue.
+
+Example:
+
+```js
+console.log("Start");
+
+setTimeout(() => console.log("Timeout"), 0);
+
+Promise.resolve().then(() => console.log("Promise"));
+
+console.log("End");
+```
+
+➡️ Output:
+
+```
+Start
+End
+Promise
+Timeout
+```
+
+Even with `0ms` delay, the Promise runs first — microtasks run **before** setTimeout.
+
+---
+
+## ✅ Summary:
+
+| Component       | Role                                                    |
+| --------------- | ------------------------------------------------------- |
+| Call Stack      | Runs synchronous code line-by-line                      |
+| Web APIs        | Handles async tasks (like setTimeout, fetch)            |
+| Callback Queue  | Holds async callbacks waiting to be executed            |
+| Event Loop      | Moves callbacks to the call stack when it’s empty       |
+| Microtask Queue | Special queue for Promises (runs before callback queue) |
+
+---

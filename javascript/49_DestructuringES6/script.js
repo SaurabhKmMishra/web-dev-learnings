@@ -155,3 +155,10 @@ function printColors([a,b,,g]){
 
 printColors(colors);
 
+
+
+
+
+
+
+
