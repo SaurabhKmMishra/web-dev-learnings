@@ -20,7 +20,7 @@ let count = 1;
 */
 
 
-          // Below is the example to understandd event delegation
+          // Below is the example to understand event delegation
 
 
 // **Task : to delete an added card by clicking on it.
