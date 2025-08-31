@@ -27,11 +27,11 @@ It’s my **coding playground** where I experimented with concepts, tested featu
 
 ## 📂 Repository Structure  
 
-frontend-learning/
-│── Html&css Learnings/ # HTML & CSS practice files
-│── javascript/ # JavaScript concepts and examples
-│── React/ # React practice files (components, hooks, state)
-└── README.md # Documentation (this file)
+frontend-learning/ </br>
+│── Html&css Learnings/ # HTML & CSS practice files </br>
+│── javascript/ # JavaScript concepts and examples </br>
+│── React/ # React practice files (components, hooks, state) </br>
+└── README.md # Documentation (this file) </br>
 
 ---
 
